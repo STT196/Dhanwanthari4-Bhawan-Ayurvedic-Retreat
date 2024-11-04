@@ -1,0 +1,146 @@
+/* Container for the entire section */
+
+.welledu-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #d4d4d46a);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header section with title and description */
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 30px 0 10px;
+    color: #323232;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+/* Cards container */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+
+/* Individual Card */
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 30%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 20px;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(50px);
+    /* Start with a bottom offset */
+}
+
+.card.show {
+    animation: bottomToTop 0.6s ease forwards;
+}
+
+
+/* Card Image */
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+
+/* Card Title */
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #323232;
+}
+
+
+/* Card Description */
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px 20px;
+    line-height: 1.6;
+}
+
+
+/* Keyframes for bottom-to-top animation */
+
+@keyframes bottomToTop {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Center second-row cards and bring them closer */
+
+.cards-container> :nth-child(4),
+.cards-container> :nth-child(5) {
+    max-width: 45%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+    .card {
+        max-width: 45%;
+    }
+}
+
+
+/* Adjust all cards to be full-width in mobile view */
+
+@media (max-width: 600px) {
+    .welledu-container {
+        max-width: 90%;
+    }
+    .card,
+    .cards-container> :nth-child(4),
+    .cards-container> :nth-child(5) {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

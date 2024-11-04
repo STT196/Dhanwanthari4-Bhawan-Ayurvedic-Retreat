@@ -1,0 +1,161 @@
+/* Heading Styling */
+
+.package-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0 10px;
+    color: #323232;
+    font-weight: bold;
+    margin-top: 80PX;
+}
+
+
+/* Description Text Styling */
+
+.package-description-text {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+/* Container Styling */
+
+.package-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 1190px;
+    margin: 50px auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Column Styling */
+
+.package-column {
+    flex: 1;
+    min-width: 280px;
+    max-width: 30%;
+    text-align: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.package-column:hover {
+    transform: scale(1.05);
+}
+
+
+/* Two-Color Styling */
+
+.color-one {
+    background-color: #ffffffc1;
+    /* Light Green */
+}
+
+.color-two {
+    background-color: #ffffff;
+    /* Light Blue */
+}
+
+
+/* Image Styling */
+
+.package-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* Title Styling */
+
+.package-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #323232;
+}
+
+
+/* Description Styling */
+
+.package-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+/* Price Styling */
+
+.package-price {
+    font-size: 1.2rem;
+    color: #ff5722;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+/* Service List */
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-item {
+    font-size: 1rem;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.service-icon {
+    color: rgb(0, 206, 0);
+    margin-right: 8px;
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .package-column {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .package-column {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .package-heading,
+    .package-description-text {
+        font-size: 1.5rem;
+    }
+    .package-description-text {
+        padding: 0 5px;
+    }
+}

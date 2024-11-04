@@ -1,0 +1,113 @@
+/* General Styles */
+
+.gallery-container {
+    width: 100%;
+    max-width: 1150px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s, transform 0.6s ease-in-out;
+}
+
+
+/* Animation Class */
+
+.gallery-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Gallery Section */
+
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+
+/* Header Section */
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #323232;
+    margin-bottom: 10px;
+}
+
+.gallery-description {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+}
+
+
+/* Image Slider */
+
+.gallery-slider {
+    width: 100%;
+    position: relative;
+}
+
+
+/* Image Styling */
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    /* Make height responsive */
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Carousel Controls */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+
+/* Responsive Styles for Tablet and Desktop */
+
+@media (min-width: 768px) {
+    .gallery-img {
+        width: 49%;
+        max-height: 350px;
+    }
+    .image-pair {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+
+/* Mobile Styles (below 768px) */
+
+@media (max-width: 768px) {
+    .gallery-container {
+        margin: 20px;
+        width: 350px;
+        /* Additional padding if needed */
+    }
+    .gallery-img {
+        width: 100%;
+        height: auto;
+    }
+}
